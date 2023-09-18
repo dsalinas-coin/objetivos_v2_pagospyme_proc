@@ -1,0 +1,63 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ArchivosBanelco
+ *
+ * @ORM\Table(name="archivos_banelco", indexes={@ORM\Index(name="IDX_90C729D6EA2DE6EC", columns={"idarchivo"})})
+ * @ORM\Entity
+ */
+class ArchivosBanelco
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idarchivo_banelco", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idarchivoBanelco;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idarchivo_banelco_tipo", type="integer", nullable=false)
+     */
+    private $idarchivoBanelcoTipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_ingreso", type="datetime", nullable=false)
+     */
+    private $fechaIngreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+    /**
+     * @var \Archivos
+     *
+     * @ORM\ManyToOne(targetEntity="Archivos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idarchivo", referencedColumnName="idarchivo")
+     * })
+     */
+    private $idarchivo;
+
+
+}

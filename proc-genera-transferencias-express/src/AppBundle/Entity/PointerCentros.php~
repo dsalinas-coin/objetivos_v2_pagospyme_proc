@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PointerCentros
+ *
+ * @ORM\Table(name="pointer_centros")
+ * @ORM\Entity
+ */
+class PointerCentros
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcentro", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcentro;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=200, nullable=true)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="zona", type="string", length=50, nullable=true)
+     */
+    private $zona;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="smallint", nullable=true)
+     */
+    private $tipo;
+
+
+}

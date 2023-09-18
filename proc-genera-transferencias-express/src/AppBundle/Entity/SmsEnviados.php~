@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsEnviados
+ *
+ * @ORM\Table(name="sms_enviados", indexes={@ORM\Index(name="destinatario", columns={"destinatario"})})
+ * @ORM\Entity
+ */
+class SmsEnviados
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsms;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaenvio", type="datetime", nullable=true)
+     */
+    private $fechaenvio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="destinatario", type="string", length=50, nullable=true)
+     */
+    private $destinatario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=true)
+     */
+    private $idusuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texto", type="string", length=200, nullable=true)
+     */
+    private $texto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsesion", type="integer", nullable=true)
+     */
+    private $idsesion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms_envios", type="integer", nullable=true)
+     */
+    private $idsmsEnvios;
+
+
+}

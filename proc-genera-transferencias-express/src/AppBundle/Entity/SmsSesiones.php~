@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsSesiones
+ *
+ * @ORM\Table(name="sms_sesiones")
+ * @ORM\Entity
+ */
+class SmsSesiones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsesion", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsesion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="remitente", type="integer", nullable=true)
+     */
+    private $remitente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etapa_actual", type="smallint", nullable=true)
+     */
+    private $etapaActual;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idultimosms", type="integer", nullable=true)
+     */
+    private $idultimosms;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+
+}

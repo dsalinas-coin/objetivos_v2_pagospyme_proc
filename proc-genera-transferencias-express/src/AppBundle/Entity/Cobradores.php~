@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cobradores
+ *
+ * @ORM\Table(name="cobradores")
+ * @ORM\Entity
+ */
+class Cobradores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobrador", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcobrador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="razonsocial", type="string", length=100, nullable=false)
+     */
+    private $razonsocial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=100, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=50, nullable=true)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codpost", type="string", length=20, nullable=true)
+     */
+    private $codpost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idprovincia", type="integer", nullable=false)
+     */
+    private $idprovincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=200, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alias", type="string", length=100, nullable=false)
+     */
+    private $alias;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=40, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nivel", type="integer", nullable=false)
+     */
+    private $nivel;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+
+}

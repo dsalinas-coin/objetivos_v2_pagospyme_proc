@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RecibosAplicacion
+ *
+ * @ORM\Table(name="recibos_aplicacion")
+ * @ORM\Entity
+ */
+class RecibosAplicacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idaplicacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idrecibo", type="integer", nullable=true)
+     */
+    private $idrecibo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaaplicacion", type="datetime", nullable=true)
+     */
+    private $fechaaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipoaplicacion", type="smallint", nullable=true)
+     */
+    private $idtipoaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idasoc", type="integer", nullable=true)
+     */
+    private $idasoc;
+
+
+}

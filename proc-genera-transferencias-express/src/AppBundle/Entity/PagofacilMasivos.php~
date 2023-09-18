@@ -1,0 +1,228 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilMasivos
+ *
+ * @ORM\Table(name="pagofacil_masivos", indexes={@ORM\Index(name="idx_pagofacil_masivos_idcliente", columns={"idcliente"}), @ORM\Index(name="_dta_index_pagofacil_masivos_5_653297437__K6_K16_K7", columns={"idcliente", "estado", "idservicio"}), @ORM\Index(name="NonClusteredIndex-20121226-135830", columns={"codoperacion_manual"}), @ORM\Index(name="idx_idcliente_estado", columns={"idcupon", "fechaenvio", "fechavto", "idservicio", "codigo", "activo", "idtipogeneracion", "idcliente", "estado"}), @ORM\Index(name="NonClusteredIndex-20130729-121400", columns={"idtipogeneracion"}), @ORM\Index(name="idx_pagofacil_masivos_nrooperacion", columns={"idcliente", "nrooperacion"}), @ORM\Index(name="<Name of Missing Index, sysname,>", columns={"idcupon", "fechaenvio", "fechavto"}), @ORM\Index(name="idx_pagofacil_masivos_codoperacion_manual", columns={"codoperacion_manual"}), @ORM\Index(name="_dta_index_pagofacil_masivos_5_653297437__K16_K7_K15_K1_K3_11_14_17_22", columns={"nrooperacion", "importe", "observaciones", "codoperacion_manual", "estado", "idservicio", "activo", "idcupon", "fechavto"}), @ORM\Index(name="_dta_index_pagofacil_masivos_5_653297437__K6_K16_K32_K1_K18_K7_2_3_4_10_14_15", columns={"fechaenvio", "fechavto", "fechapago", "codigo", "importe", "activo", "idcliente", "estado", "en_cuponera", "idcupon", "idtipogeneracion", "idservicio"}), @ORM\Index(name="idx_pagofacil_masivos_codigo", columns={"codigo"}), @ORM\Index(name="idx_pagofacil_masivos__idservicio", columns={"idservicio"})})
+ * @ORM\Entity
+ */
+class PagofacilMasivos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcupon", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcupon;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaenvio", type="datetime", nullable=true)
+     */
+    private $fechaenvio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacobro", type="datetime", nullable=true)
+     */
+    private $fechacobro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=70, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=50, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nrooperacion", type="integer", nullable=true)
+     */
+    private $nrooperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cupon", type="string", length=0, nullable=true)
+     */
+    private $cupon;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmoneda", type="smallint", nullable=true)
+     */
+    private $idmoneda;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", length=-1, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipogeneracion", type="smallint", nullable=true)
+     */
+    private $idtipogeneracion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto2", type="datetime", nullable=true)
+     */
+    private $fechavto2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe2", type="integer", nullable=true)
+     */
+    private $importe2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_cliente", type="string", length=50, nullable=true)
+     */
+    private $codigoCliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codoperacion_manual", type="string", length=50, nullable=true)
+     */
+    private $codoperacionManual;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="terminal_id", type="string", length=6, nullable=true)
+     */
+    private $terminalId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="term_seq_num", type="string", length=4, nullable=true)
+     */
+    private $termSeqNum;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuponhtml", type="text", length=-1, nullable=true)
+     */
+    private $cuponhtml;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importepagado", type="integer", nullable=true)
+     */
+    private $importepagado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaprocesopf", type="datetime", nullable=true)
+     */
+    private $fechaprocesopf;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechadesactivacion", type="datetime", nullable=true)
+     */
+    private $fechadesactivacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones_internas", type="string", length=255, nullable=true)
+     */
+    private $observacionesInternas;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="en_cuponera", type="boolean", nullable=true)
+     */
+    private $enCuponera;
+
+
+}

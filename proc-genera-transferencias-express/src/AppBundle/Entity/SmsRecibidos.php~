@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsRecibidos
+ *
+ * @ORM\Table(name="sms_recibidos")
+ * @ORM\Entity
+ */
+class SmsRecibidos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsms;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="remitente", type="string", length=50, nullable=true)
+     */
+    private $remitente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=true)
+     */
+    private $idusuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texto", type="string", length=500, nullable=true)
+     */
+    private $texto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecharecibido", type="datetime", nullable=true)
+     */
+    private $fecharecibido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsesion", type="integer", nullable=true)
+     */
+    private $idsesion;
+
+
+}

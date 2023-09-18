@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ArchivosBanelcoTipos
+ *
+ * @ORM\Table(name="archivos_banelco_tipos")
+ * @ORM\Entity
+ */
+class ArchivosBanelcoTipos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idarchivo_banelco_tipo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idarchivoBanelcoTipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+
+}

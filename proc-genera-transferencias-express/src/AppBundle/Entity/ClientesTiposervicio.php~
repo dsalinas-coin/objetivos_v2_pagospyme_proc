@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesTiposervicio
+ *
+ * @ORM\Table(name="clientes_tiposervicio")
+ * @ORM\Entity
+ */
+class ClientesTiposervicio
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtiposervicio", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtiposervicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="visible", type="smallint", nullable=true)
+     */
+    private $visible;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idempresa", type="integer", nullable=true)
+     */
+    private $idempresa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abreviatura", type="string", length=50, nullable=true)
+     */
+    private $abreviatura;
+
+
+}

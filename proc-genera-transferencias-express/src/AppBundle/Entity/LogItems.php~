@@ -1,0 +1,116 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LogItems
+ *
+ * @ORM\Table(name="log_items", uniqueConstraints={@ORM\UniqueConstraint(name="UQ__log_items__220B0B18", columns={"idlog"})})
+ * @ORM\Entity
+ */
+class LogItems
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idlog", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idlog;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idoperacion", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idproceso", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idproceso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idtipo", type="decimal", precision=18, scale=0, nullable=true)
+     */
+    private $idtipo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcliente", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idusuario", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idusuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idservicio", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcobro", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idcobro;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idnotacredito", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idnotacredito;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcobro_fail", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idcobroFail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", length=8, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+
+}

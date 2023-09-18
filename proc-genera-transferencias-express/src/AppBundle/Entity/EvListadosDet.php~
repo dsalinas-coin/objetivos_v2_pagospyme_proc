@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EvListadosDet
+ *
+ * @ORM\Table(name="ev_listados_det")
+ * @ORM\Entity
+ */
+class EvListadosDet
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idregistro", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idregistro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcontacto", type="integer", nullable=true)
+     */
+    private $idcontacto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="smallint", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecharealizado", type="datetime", nullable=true)
+     */
+    private $fecharealizado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

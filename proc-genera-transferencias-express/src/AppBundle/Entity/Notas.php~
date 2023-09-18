@@ -1,0 +1,130 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Notas
+ *
+ * @ORM\Table(name="notas", indexes={@ORM\Index(name="idx_cliente", columns={"idcliente"}), @ORM\Index(name="idx_Fecha", columns={"fecha"}), @ORM\Index(name="idx_IdUsuario", columns={"idusuario"}), @ORM\Index(name="notas0", columns={"idoperador", "fecha"}), @ORM\Index(name="idnota_respuesta", columns={"idnota_respuesta"}), @ORM\Index(name="idcategoria", columns={"idcategoria"}), @ORM\Index(name="urgente_estado", columns={"urgente", "estado"}), @ORM\Index(name="_dta_index_notas_5_273436048__K2_K1_K7_K5_3_6", columns={"idoperador", "descrip", "idusuario", "idnota", "idcategoria", "fecha", "contactable", "idtiporeclamo", "idmotivomora"})})
+ * @ORM\Entity
+ */
+class Notas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idnota", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnota;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=false)
+     */
+    private $idusuario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descrip", type="string", length=2000, nullable=false)
+     */
+    private $descrip;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="integer", nullable=false)
+     */
+    private $idcategoria;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="urgente", type="integer", nullable=false)
+     */
+    private $urgente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente_priv", type="integer", nullable=true)
+     */
+    private $idclientePriv;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idnota_respuesta", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idnotaRespuesta;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_apertura", type="datetime", nullable=true)
+     */
+    private $fechaApertura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contactable", type="smallint", nullable=true)
+     */
+    private $contactable;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtiporeclamo", type="smallint", nullable=true)
+     */
+    private $idtiporeclamo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmotivomora", type="smallint", nullable=true)
+     */
+    private $idmotivomora;
+
+
+}

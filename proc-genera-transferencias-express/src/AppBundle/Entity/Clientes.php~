@@ -1,0 +1,550 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Clientes
+ *
+ * @ORM\Table(name="clientes", indexes={@ORM\Index(name="idtiposervicio", columns={"idtiposervicio"}), @ORM\Index(name="idx_clientes_aliaspassword", columns={"alias", "password"}), @ORM\Index(name="idx_clientes_estado", columns={"estado"}), @ORM\Index(name="idx_clientes_codcliente", columns={"codcliente"}), @ORM\Index(name="_dta_index_clientes_5_722869692__K75", columns={"codigo_psf"}), @ORM\Index(name="_dta_index_clientes_5_722869692__K1", columns={"idcliente"})})
+ * @ORM\Entity
+ */
+class Clientes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alias", type="string", length=20, nullable=false)
+     */
+    private $alias;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=50, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mailavisos", type="string", length=100, nullable=true)
+     */
+    private $mailavisos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descavisos", type="string", length=80, nullable=true)
+     */
+    private $descavisos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="razonsocial", type="string", length=200, nullable=true)
+     */
+    private $razonsocial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrefantasia", type="string", length=100, nullable=true)
+     */
+    private $nombrefantasia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titular", type="string", length=80, nullable=true)
+     */
+    private $titular;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contacto", type="string", length=80, nullable=true)
+     */
+    private $contacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailcontacto", type="string", length=400, nullable=true)
+     */
+    private $emailcontacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailadmin", type="string", length=400, nullable=true)
+     */
+    private $emailadmin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailtickets", type="string", length=400, nullable=true)
+     */
+    private $emailtickets;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailprocesos", type="string", length=400, nullable=true)
+     */
+    private $emailprocesos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailavisos", type="string", length=500, nullable=true)
+     */
+    private $emailavisos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=300, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcondicioniva", type="smallint", nullable=true)
+     */
+    private $idcondicioniva;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuit", type="string", length=13, nullable=false)
+     */
+    private $cuit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=200, nullable=true)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=40, nullable=true)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="partido", type="string", length=40, nullable=true)
+     */
+    private $partido;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codpost", type="string", length=15, nullable=true)
+     */
+    private $codpost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idprovincia", type="integer", nullable=true)
+     */
+    private $idprovincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pais", type="string", length=4, nullable=true)
+     */
+    private $pais;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idpais", type="smallint", nullable=true)
+     */
+    private $idpais;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=false)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nivel", type="integer", nullable=false)
+     */
+    private $nivel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommamex", type="string", length=40, nullable=true)
+     */
+    private $ecommamex;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommvisa", type="string", length=40, nullable=true)
+     */
+    private $ecommvisa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommmaster", type="string", length=40, nullable=true)
+     */
+    private $ecommmaster;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommpagof", type="string", length=40, nullable=true)
+     */
+    private $ecommpagof;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommpagofcred", type="string", length=50, nullable=true)
+     */
+    private $ecommpagofcred;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="esubcommpagof", type="string", length=5, nullable=true)
+     */
+    private $esubcommpagof;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommdecidir", type="string", length=40, nullable=true)
+     */
+    private $ecommdecidir;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommpagomiscuentas", type="string", length=40, nullable=true)
+     */
+    private $ecommpagomiscuentas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="plantilla", type="string", length=40, nullable=true)
+     */
+    private $plantilla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="avisoretiro", type="string", length=40, nullable=true)
+     */
+    private $avisoretiro;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="textocheque", type="string", length=500, nullable=true)
+     */
+    private $textocheque;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="menuesp", type="string", length=100, nullable=true)
+     */
+    private $menuesp;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cant_fail", type="integer", nullable=false)
+     */
+    private $cantFail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="passwordbajo", type="string", length=50, nullable=true)
+     */
+    private $passwordbajo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="diashabilesretiro", type="integer", nullable=true)
+     */
+    private $diashabilesretiro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="diasvalidezcuponpf", type="smallint", nullable=true)
+     */
+    private $diasvalidezcuponpf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="diasremision", type="integer", nullable=true)
+     */
+    private $diasremision;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtiposervicio", type="smallint", nullable=true)
+     */
+    private $idtiposervicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ong", type="smallint", nullable=true)
+     */
+    private $ong;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pagofacil_estado", type="smallint", nullable=true)
+     */
+    private $pagofacilEstado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="enviar_emaildiariopagos", type="smallint", nullable=true)
+     */
+    private $enviarEmaildiariopagos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=1000, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="multiplicador_importedocvencido", type="float", precision=24, scale=0, nullable=true)
+     */
+    private $multiplicadorImportedocvencido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipodoc_default", type="smallint", nullable=true)
+     */
+    private $idtipodocDefault;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codcliente", type="string", length=8, nullable=true)
+     */
+    private $codcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codcliente2", type="string", length=8, nullable=true)
+     */
+    private $codcliente2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idbanco", type="integer", nullable=true)
+     */
+    private $idbanco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrocuentabanco", type="string", length=50, nullable=true)
+     */
+    private $nrocuentabanco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sucursal", type="string", length=50, nullable=true)
+     */
+    private $sucursal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cbu", type="string", length=50, nullable=true)
+     */
+    private $cbu;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enviar_codigospf", type="boolean", nullable=true)
+     */
+    private $enviarCodigospf;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rutalogocred", type="string", length=200, nullable=true)
+     */
+    private $rutalogocred;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rutalogogrande", type="string", length=200, nullable=true)
+     */
+    private $rutalogogrande;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="operativo", type="smallint", nullable=true)
+     */
+    private $operativo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="esubcommpagoftrad", type="string", length=5, nullable=true)
+     */
+    private $esubcommpagoftrad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comentarios", type="string", length=100, nullable=true)
+     */
+    private $comentarios;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codautenticacion", type="string", length=50, nullable=true)
+     */
+    private $codautenticacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ws_token", type="string", length=32, nullable=true)
+     */
+    private $wsToken;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="debito_directo", type="smallint", nullable=true)
+     */
+    private $debitoDirecto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="temp", type="string", length=200, nullable=true)
+     */
+    private $temp;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url_post", type="string", length=200, nullable=true)
+     */
+    private $urlPost;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ftp_user", type="string", length=50, nullable=true)
+     */
+    private $ftpUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ftp_pass", type="string", length=50, nullable=true)
+     */
+    private $ftpPass;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ftp_carpeta", type="string", length=50, nullable=true)
+     */
+    private $ftpCarpeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ftp_codigo", type="string", length=50, nullable=true)
+     */
+    private $ftpCodigo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="host", type="string", length=50, nullable=true)
+     */
+    private $host;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pagar_factura_vencida", type="smallint", nullable=false)
+     */
+    private $pagarFacturaVencida;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_psf", type="string", length=4, nullable=true)
+     */
+    private $codigoPsf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcuenta_tipo", type="integer", nullable=true)
+     */
+    private $idcuentaTipo;
+
+
+}

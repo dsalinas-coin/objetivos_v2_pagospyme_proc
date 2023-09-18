@@ -1,0 +1,116 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisTareasDetalles
+ *
+ * @ORM\Table(name="sis_tareas_detalles")
+ * @ORM\Entity
+ */
+class SisTareasDetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtarea_detalle", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtareaDetalle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtarea", type="integer", nullable=true)
+     */
+    private $idtarea;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechainicio", type="datetime", nullable=true)
+     */
+    private $fechainicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaestinicio", type="datetime", nullable=true)
+     */
+    private $fechaestinicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechafin", type="datetime", nullable=true)
+     */
+    private $fechafin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaestfin", type="datetime", nullable=true)
+     */
+    private $fechaestfin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="progreso", type="smallint", nullable=true)
+     */
+    private $progreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=1000, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="orden", type="smallint", nullable=true)
+     */
+    private $orden;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idestado", type="smallint", nullable=true)
+     */
+    private $idestado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pasounico", type="smallint", nullable=true)
+     */
+    private $pasounico;
+
+
+}

@@ -1,0 +1,102 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mediospago
+ *
+ * @ORM\Table(name="mediospago")
+ * @ORM\Entity
+ */
+class Mediospago
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idmedio", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idmedio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=200, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcioninterna", type="string", length=50, nullable=true)
+     */
+    private $descripcioninterna;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comentarios", type="string", length=100, nullable=true)
+     */
+    private $comentarios;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigodecidir", type="string", length=2, nullable=true)
+     */
+    private $codigodecidir;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="habilitable", type="boolean", nullable=true)
+     */
+    private $habilitable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre_archivo", type="string", length=50, nullable=true)
+     */
+    private $nombreArchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigows", type="string", length=10, nullable=true)
+     */
+    private $codigows;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipo", type="integer", nullable=true)
+     */
+    private $idtipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigoapi", type="string", length=20, nullable=true)
+     */
+    private $codigoapi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="string", length=30, nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idmedio_nuevo", type="string", length=30, nullable=true)
+     */
+    private $idmedioNuevo;
+
+
+}

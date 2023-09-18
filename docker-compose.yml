@@ -1,0 +1,52 @@
+version: "3.7"
+
+services:
+  legacy_db:
+    container_name: legacy_db
+    image: mysql:5.7
+    volumes:
+      - ./mysql_server:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=cdpnew"
+    ports:
+      - 3307:3306
+    networks: 
+      legacy_network:
+   
+  proc-genera-transferencias-express:
+    build:
+      args:
+        UID: $U_ID
+      context: ./docker-files/genera-transferencias-express
+      dockerfile: Dockerfile
+    container_name: genera-transferencias-express
+    # restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./proc-genera-transferencias-express:/var/www/html
+    links:
+      - legacy_db
+    ports:
+      - 81:80
+    networks: 
+      legacy_network:
+
+  phpmyadmin:
+    container_name: pl_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - "PMA_HOST=legacy_db"
+      - "PMA_USER=root"
+      - "PMA_PASSWORD=root"
+    links:
+      - legacy_db
+    ports:
+      - 8080:80
+    networks:
+      legacy_network:
+
+networks: 
+    legacy_network:
+      
+

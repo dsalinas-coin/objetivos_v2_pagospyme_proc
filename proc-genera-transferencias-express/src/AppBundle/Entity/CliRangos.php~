@@ -1,0 +1,102 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CliRangos
+ *
+ * @ORM\Table(name="cli_rangos")
+ * @ORM\Entity
+ */
+class CliRangos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idrango", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idrango;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="desde", type="integer", nullable=false)
+     */
+    private $desde;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="hasta", type="integer", nullable=false)
+     */
+    private $hasta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idaccion", type="smallint", nullable=true)
+     */
+    private $idaccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="frecuencia", type="integer", nullable=true)
+     */
+    private $frecuencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idestado", type="smallint", nullable=false)
+     */
+    private $idestado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="moraporc", type="integer", nullable=true)
+     */
+    private $moraporc;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="moraimp", type="integer", nullable=true)
+     */
+    private $moraimp;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nroenvio", type="smallint", nullable=true)
+     */
+    private $nroenvio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+
+}

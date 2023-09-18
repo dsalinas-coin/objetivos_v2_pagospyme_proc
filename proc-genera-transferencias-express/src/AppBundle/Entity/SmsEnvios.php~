@@ -1,0 +1,102 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsEnvios
+ *
+ * @ORM\Table(name="sms_envios", indexes={@ORM\Index(name="idsmsdbtemp", columns={"idsmsdbtemp_borrar"})})
+ * @ORM\Entity
+ */
+class SmsEnvios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsms;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcampania", type="integer", nullable=true)
+     */
+    private $idcampania;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensaje", type="string", length=200, nullable=true)
+     */
+    private $mensaje;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaenviado", type="datetime", nullable=true)
+     */
+    private $fechaenviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="enviado", type="smallint", nullable=true)
+     */
+    private $enviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsender", type="smallint", nullable=true)
+     */
+    private $idsender;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=200, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsmsdbtemp_borrar", type="integer", nullable=true)
+     */
+    private $idsmsdbtempBorrar;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coltemp_borrar", type="integer", nullable=true)
+     */
+    private $coltempBorrar;
+
+
+}

@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tiposdocumento
+ *
+ * @ORM\Table(name="tiposdocumento")
+ * @ORM\Entity
+ */
+class Tiposdocumento
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipodocumento", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtipodocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=5, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo2", type="string", length=3, nullable=true)
+     */
+    private $codigo2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="multiplicador", type="smallint", nullable=true)
+     */
+    private $multiplicador;
+
+
+}

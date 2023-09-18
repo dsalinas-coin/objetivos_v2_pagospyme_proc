@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisTareasNotas
+ *
+ * @ORM\Table(name="sis_tareas_notas")
+ * @ORM\Entity
+ */
+class SisTareasNotas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnota", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnota;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="text", length=-1, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtarea", type="integer", nullable=true)
+     */
+    private $idtarea;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="urgente", type="smallint", nullable=false)
+     */
+    private $urgente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="publico", type="smallint", nullable=false)
+     */
+    private $publico;
+
+
+}

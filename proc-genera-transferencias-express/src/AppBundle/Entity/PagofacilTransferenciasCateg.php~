@@ -1,0 +1,32 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilTransferenciasCateg
+ *
+ * @ORM\Table(name="pagofacil_transferencias_categ")
+ * @ORM\Entity
+ */
+class PagofacilTransferenciasCateg
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcategoria;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+
+}

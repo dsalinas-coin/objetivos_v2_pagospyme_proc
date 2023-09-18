@@ -1,0 +1,151 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * InformeMensualPp201708
+ *
+ * @ORM\Table(name="informe_mensual_pp_2017_08")
+ * @ORM\Entity
+ */
+class InformeMensualPp201708
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idreg", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idreg;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bifurcada", type="string", length=6, nullable=false)
+     */
+    private $bifurcada;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="razonsocial", type="string", length=200, nullable=false)
+     */
+    private $razonsocial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrefantasia", type="string", length=200, nullable=false)
+     */
+    private $nombrefantasia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="string", length=50, nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="impPF", type="integer", nullable=false)
+     */
+    private $imppf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="impCDP", type="integer", nullable=false)
+     */
+    private $impcdp;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transacciones", type="integer", nullable=false)
+     */
+    private $transacciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="activo", type="string", length=2, nullable=false)
+     */
+    private $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="operativo", type="string", length=2, nullable=false)
+     */
+    private $operativo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ong", type="string", length=2, nullable=false)
+     */
+    private $ong;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Seguimientos", type="string", length=2, nullable=false)
+     */
+    private $seguimientos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ecommerce", type="string", length=2, nullable=false)
+     */
+    private $ecommerce;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="credenciales", type="string", length=2, nullable=false)
+     */
+    private $credenciales;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tradicional", type="string", length=2, nullable=false)
+     */
+    private $tradicional;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tradicional_online", type="string", length=2, nullable=false)
+     */
+    private $tradicionalOnline;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="credenciales_online", type="string", length=2, nullable=false)
+     */
+    private $credencialesOnline;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="recaudado", type="integer", nullable=false)
+     */
+    private $recaudado;
+
+
+}

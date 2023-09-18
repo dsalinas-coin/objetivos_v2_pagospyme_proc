@@ -1,0 +1,42 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * MediospagoTipos
+ *
+ * @ORM\Table(name="mediospago_tipos")
+ * @ORM\Entity
+ */
+class MediospagoTipos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=200, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=false)
+     */
+    private $activo;
+
+    /**
+     * @var \MediospagoTipos
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="MediospagoTipos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idtipo", referencedColumnName="idtipo")
+     * })
+     */
+    private $idtipo;
+
+
+}

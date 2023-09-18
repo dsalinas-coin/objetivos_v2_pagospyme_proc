@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CobrosDestransitados
+ *
+ * @ORM\Table(name="cobros_destransitados")
+ * @ORM\Entity
+ */
+class CobrosDestransitados
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobrod", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcobrod;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="string", length=100, nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motivo", type="string", length=200, nullable=true)
+     */
+    private $motivo;
+
+
+}

@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotasCategClientes
+ *
+ * @ORM\Table(name="notas_categ_clientes")
+ * @ORM\Entity
+ */
+class NotasCategClientes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnotacateg", type="integer", nullable=true)
+     */
+    private $idnotacateg;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=300, nullable=true)
+     */
+    private $email;
+
+
+}

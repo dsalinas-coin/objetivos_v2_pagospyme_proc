@@ -1,0 +1,130 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilMasivosPagos
+ *
+ * @ORM\Table(name="pagofacil_masivos_pagos", indexes={@ORM\Index(name="idx_pagofacil_masivos_pagos_idcupon", columns={"idcupon"}), @ORM\Index(name="idx_pagofacil_masivos_pagos_fechaingreso", columns={"fechaingreso"}), @ORM\Index(name="idx_pagofacil_masivos_pagos_fechapago", columns={"fechapago"}), @ORM\Index(name="idx_pagofacil_masivos_pagos_fechacobro", columns={"fechacobro", "terminal_id"}), @ORM\Index(name="NonClusteredIndex-20130603-134835", columns={"emailenviado"}), @ORM\Index(name="NonClusteredIndex-20160803-184806", columns={"idmedio"}), @ORM\Index(name="idx_20170403", columns={"idcupon", "fechacobro", "idcobro_estado", "idmedio"})})
+ * @ORM\Entity
+ */
+class PagofacilMasivosPagos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idpago", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idpago;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcupon", type="integer", nullable=false)
+     */
+    private $idcupon;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=false)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=false)
+     */
+    private $fechapago;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacobro", type="datetime", nullable=false)
+     */
+    private $fechacobro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaprocesopf", type="datetime", nullable=true)
+     */
+    private $fechaprocesopf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importepagado", type="integer", nullable=false)
+     */
+    private $importepagado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="terminal_id", type="string", length=50, nullable=false)
+     */
+    private $terminalId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="term_seq_num", type="string", length=50, nullable=false)
+     */
+    private $termSeqNum;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="emailenviado", type="smallint", nullable=false)
+     */
+    private $emailenviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobro_estado", type="smallint", nullable=true)
+     */
+    private $idcobroEstado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechainformado_ol", type="datetime", nullable=true)
+     */
+    private $fechainformadoOl;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmedio", type="integer", nullable=true)
+     */
+    private $idmedio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechareversa", type="datetime", nullable=true)
+     */
+    private $fechareversa;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso_reversa", type="datetime", nullable=true)
+     */
+    private $fechaingresoReversa;
+
+
+}

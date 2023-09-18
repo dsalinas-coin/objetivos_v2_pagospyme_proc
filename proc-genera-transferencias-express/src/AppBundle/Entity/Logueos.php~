@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Logueos
+ *
+ * @ORM\Table(name="logueos")
+ * @ORM\Entity
+ */
+class Logueos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id_logueo", type="decimal", precision=18, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idLogueo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechain", type="datetime", nullable=true)
+     */
+    private $fechain;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaout", type="datetime", nullable=true)
+     */
+    private $fechaout;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaout2", type="datetime", nullable=true)
+     */
+    private $fechaout2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=true)
+     */
+    private $estado;
+
+
+}

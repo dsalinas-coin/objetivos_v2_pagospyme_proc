@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EvBases
+ *
+ * @ORM\Table(name="ev_bases")
+ * @ORM\Entity
+ */
+class EvBases
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idbase", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idbase;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrearchivo", type="string", length=100, nullable=true)
+     */
+    private $nombrearchivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

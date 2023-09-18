@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesNovedades
+ *
+ * @ORM\Table(name="clientes_novedades")
+ * @ORM\Entity
+ */
+class ClientesNovedades
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente_novedad", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idclienteNovedad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_visto", type="datetime", nullable=false)
+     */
+    private $fechaVisto;
+
+
+}

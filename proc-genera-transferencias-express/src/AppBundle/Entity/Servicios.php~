@@ -1,0 +1,137 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Servicios
+ *
+ * @ORM\Table(name="servicios", indexes={@ORM\Index(name="idx_idcliente", columns={"idcliente"}), @ORM\Index(name="idx_IDUsuario", columns={"idusuario"}), @ORM\Index(name="idx_numcliente", columns={"numcliente"}), @ORM\Index(name="idx_servicios_estado", columns={"estado"}), @ORM\Index(name="_dta_index_servicios_5_827202047__K8_K1_K3", columns={"estado", "idservicio", "idcliente"}), @ORM\Index(name="idx_servicios_datoadic3", columns={"datoadic3", "idservicio"}), @ORM\Index(name="_dta_index_servicios_5_827202047__K4_K3", columns={"numcliente", "idcliente"}), @ORM\Index(name="_dta_index_servicios_5_827202047__K4_K3_K8_K1", columns={"numcliente", "idcliente", "estado", "idservicio"}), @ORM\Index(name="_dta_index_servicios_5_827202047__K1_K3_K2_4", columns={"numcliente", "idservicio", "idcliente", "idusuario"}), @ORM\Index(name="idx_servicios_idcliente_estado", columns={"idservicio", "idusuario", "idcliente", "estado"}), @ORM\Index(name="_dta_index_servicios_5_1236251509__K1_K8_K3_K2_4", columns={"numcliente", "idservicio", "estado", "idcliente", "idusuario"})})
+ * @ORM\Entity
+ */
+class Servicios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idservicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=false)
+     */
+    private $idusuario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numcliente", type="string", length=60, nullable=true)
+     */
+    private $numcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=200, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechainicio", type="datetime", nullable=true)
+     */
+    private $fechainicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="CGP", type="string", length=50, nullable=true)
+     */
+    private $cgp;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="referencia", type="string", length=50, nullable=true)
+     */
+    private $referencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="saldoactual", type="integer", nullable=false)
+     */
+    private $saldoactual;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idgrupo", type="smallint", nullable=true)
+     */
+    private $idgrupo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="condventa", type="string", length=50, nullable=true)
+     */
+    private $condventa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="datoadic1", type="string", length=400, nullable=true)
+     */
+    private $datoadic1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="datoadic2", type="string", length=200, nullable=true)
+     */
+    private $datoadic2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codcredencialpf", type="string", length=50, nullable=true)
+     */
+    private $codcredencialpf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="datoadic3", type="integer", nullable=true)
+     */
+    private $datoadic3;
+
+
+}

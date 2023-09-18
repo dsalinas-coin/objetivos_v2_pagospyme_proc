@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CalendarioadminLogueos
+ *
+ * @ORM\Table(name="calendarioadmin_logueos")
+ * @ORM\Entity
+ */
+class CalendarioadminLogueos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idlogueo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idlogueo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechain", type="datetime", nullable=false)
+     */
+    private $fechain;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaout", type="datetime", nullable=true)
+     */
+    private $fechaout;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="smallint", nullable=false)
+     */
+    private $idoperador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=100, nullable=false)
+     */
+    private $codigo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+
+}

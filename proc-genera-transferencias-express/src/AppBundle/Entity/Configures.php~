@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Configures
+ *
+ * @ORM\Table(name="configures", uniqueConstraints={@ORM\UniqueConstraint(name="UQ__Configures__02FC7413", columns={"idconfig"})})
+ * @ORM\Entity
+ */
+class Configures
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idconfig", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idconfig;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idconsulta", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idconsulta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="posicion", type="integer", nullable=false)
+     */
+    private $posicion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="campo", type="string", length=40, nullable=false)
+     */
+    private $campo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="formato", type="string", length=30, nullable=true)
+     */
+    private $formato;
+
+
+}

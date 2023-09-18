@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisConceptos
+ *
+ * @ORM\Table(name="sis_conceptos")
+ * @ORM\Entity
+ */
+class SisConceptos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idconcepto", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idconcepto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=250, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="empresa", type="string", length=50, nullable=true)
+     */
+    private $empresa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idempresa", type="string", length=10, nullable=true)
+     */
+    private $idempresa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mesconcepto", type="integer", nullable=true)
+     */
+    private $mesconcepto;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="es_abono_minimo", type="boolean", nullable=true)
+     */
+    private $esAbonoMinimo;
+
+
+}

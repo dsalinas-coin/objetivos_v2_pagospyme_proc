@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Datosadicionales
+ *
+ * @ORM\Table(name="datosadicionales")
+ * @ORM\Entity
+ */
+class Datosadicionales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddatoadic", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddatoadic;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="smallint", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nro", type="smallint", nullable=true)
+     */
+    private $nro;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrecampo", type="string", length=20, nullable=true)
+     */
+    private $nombrecampo;
+
+
+}

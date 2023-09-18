@@ -1,0 +1,32 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * BancosCuentasTipos
+ *
+ * @ORM\Table(name="bancos_cuentas_tipos")
+ * @ORM\Entity
+ */
+class BancosCuentasTipos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcuenta_tipo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcuentaTipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+
+}

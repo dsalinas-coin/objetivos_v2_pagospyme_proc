@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Noticias
+ *
+ * @ORM\Table(name="noticias")
+ * @ORM\Entity
+ */
+class Noticias
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idnoticia", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnoticia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=200, nullable=false)
+     */
+    private $url;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=200, nullable=false)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texto", type="string", length=1000, nullable=false)
+     */
+    private $texto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+
+}

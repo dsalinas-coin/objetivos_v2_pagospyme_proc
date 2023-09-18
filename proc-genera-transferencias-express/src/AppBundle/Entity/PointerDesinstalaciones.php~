@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PointerDesinstalaciones
+ *
+ * @ORM\Table(name="pointer_desinstalaciones")
+ * @ORM\Entity
+ */
+class PointerDesinstalaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idturno", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idturno;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcentro", type="integer", nullable=true)
+     */
+    private $idcentro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="diaturno", type="datetime", nullable=true)
+     */
+    private $diaturno;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idhorario", type="smallint", nullable=true)
+     */
+    private $idhorario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=200, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

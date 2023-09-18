@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilTransferencias
+ *
+ * @ORM\Table(name="pagofacil_transferencias")
+ * @ORM\Entity
+ */
+class PagofacilTransferencias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtransferencia", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtransferencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtransferencia_tipo", type="smallint", nullable=true)
+     */
+    private $idtransferenciaTipo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechadeposito", type="datetime", nullable=true)
+     */
+    private $fechadeposito;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="montototal", type="integer", nullable=true)
+     */
+    private $montototal;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="email_enviado", type="boolean", nullable=true)
+     */
+    private $emailEnviado;
+
+
+}

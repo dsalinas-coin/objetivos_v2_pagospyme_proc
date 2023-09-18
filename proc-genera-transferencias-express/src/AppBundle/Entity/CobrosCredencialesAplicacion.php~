@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CobrosCredencialesAplicacion
+ *
+ * @ORM\Table(name="cobros_credenciales_aplicacion")
+ * @ORM\Entity
+ */
+class CobrosCredencialesAplicacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idaplicacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobrocred", type="integer", nullable=true)
+     */
+    private $idcobrocred;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaaplicacion", type="datetime", nullable=true)
+     */
+    private $fechaaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+
+}

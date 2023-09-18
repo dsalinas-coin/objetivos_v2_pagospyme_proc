@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsBasetextos
+ *
+ * @ORM\Table(name="sms_basetextos")
+ * @ORM\Entity
+ */
+class SmsBasetextos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtexto", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtexto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etapa", type="smallint", nullable=true)
+     */
+    private $etapa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="textoConsulta", type="string", length=200, nullable=true)
+     */
+    private $textoconsulta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="textoRespuesta", type="string", length=200, nullable=true)
+     */
+    private $textorespuesta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="irEtapa", type="smallint", nullable=true)
+     */
+    private $iretapa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

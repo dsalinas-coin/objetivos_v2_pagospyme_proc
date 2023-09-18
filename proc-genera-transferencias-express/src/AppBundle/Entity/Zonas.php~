@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Zonas
+ *
+ * @ORM\Table(name="zonas")
+ * @ORM\Entity
+ */
+class Zonas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idzona", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idzona;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobrador", type="integer", nullable=true)
+     */
+    private $idcobrador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idprovincia", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idprovincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=40, nullable=false)
+     */
+    private $descripcion;
+
+
+}

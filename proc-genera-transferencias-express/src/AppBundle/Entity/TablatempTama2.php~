@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TablatempTama2
+ *
+ * @ORM\Table(name="tablatemp_tama2", indexes={@ORM\Index(name="col1", columns={"col1"}), @ORM\Index(name="col3", columns={"col3"})})
+ * @ORM\Entity
+ */
+class TablatempTama2
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col1", type="string", length=50, nullable=true)
+     */
+    private $col1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col2", type="text", length=-1, nullable=true)
+     */
+    private $col2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col3", type="string", length=100, nullable=true)
+     */
+    private $col3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col4", type="string", length=100, nullable=true)
+     */
+    private $col4;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col5", type="string", length=100, nullable=true)
+     */
+    private $col5;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col6", type="string", length=100, nullable=true)
+     */
+    private $col6;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col7", type="string", length=100, nullable=true)
+     */
+    private $col7;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col8", type="string", length=50, nullable=true)
+     */
+    private $col8;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col9", type="string", length=50, nullable=true)
+     */
+    private $col9;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col10", type="string", length=50, nullable=true)
+     */
+    private $col10;
+
+
+}

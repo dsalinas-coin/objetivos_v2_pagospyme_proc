@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisTareasPlazos
+ *
+ * @ORM\Table(name="sis_tareas_plazos")
+ * @ORM\Entity
+ */
+class SisTareasPlazos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idplazo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idplazo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="orden", type="smallint", nullable=true)
+     */
+    private $orden;
+
+
+}

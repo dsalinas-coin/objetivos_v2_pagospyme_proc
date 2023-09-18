@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Pagofacil
+ *
+ * @ORM\Table(name="pagofacil")
+ * @ORM\Entity
+ */
+class Pagofacil
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcupon", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcupon;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobro", type="integer", nullable=false)
+     */
+    private $idcobro;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=40, nullable=false)
+     */
+    private $codigo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cupon", type="text", length=8, nullable=false)
+     */
+    private $cupon;
+
+
+}

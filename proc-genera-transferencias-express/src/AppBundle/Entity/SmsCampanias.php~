@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SmsCampanias
+ *
+ * @ORM\Table(name="sms_campanias")
+ * @ORM\Entity
+ */
+class SmsCampanias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcampania", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcampania;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechainicio", type="datetime", nullable=true)
+     */
+    private $fechainicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechafin", type="datetime", nullable=true)
+     */
+    private $fechafin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=200, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=2000, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+
+}

@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotasCateg
+ *
+ * @ORM\Table(name="notas_categ")
+ * @ORM\Entity
+ */
+class NotasCateg
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcategoria;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=200, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="explicacion", type="text", length=8, nullable=true)
+     */
+    private $explicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=5, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contactable", type="smallint", nullable=true)
+     */
+    private $contactable;
+
+
+}

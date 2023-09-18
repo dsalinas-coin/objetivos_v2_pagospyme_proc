@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilTransferenciasDet
+ *
+ * @ORM\Table(name="pagofacil_transferencias_det")
+ * @ORM\Entity
+ */
+class PagofacilTransferenciasDet
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddetalle", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddetalle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtransferencia", type="integer", nullable=true)
+     */
+    private $idtransferencia;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idzona", type="string", length=20, nullable=true)
+     */
+    private $idzona;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="smallint", nullable=true)
+     */
+    private $idcategoria;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cantidad", type="integer", nullable=true)
+     */
+    private $cantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+
+}

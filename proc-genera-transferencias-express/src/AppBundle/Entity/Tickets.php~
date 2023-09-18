@@ -1,0 +1,88 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tickets
+ *
+ * @ORM\Table(name="tickets")
+ * @ORM\Entity
+ */
+class Tickets
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idticket", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idticket;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaultima", type="datetime", nullable=true)
+     */
+    private $fechaultima;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=false)
+     */
+    private $idusuario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="integer", nullable=false)
+     */
+    private $idcategoria;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="asunto", type="string", length=100, nullable=true)
+     */
+    private $asunto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="visto", type="smallint", nullable=true)
+     */
+    private $visto;
+
+
+}

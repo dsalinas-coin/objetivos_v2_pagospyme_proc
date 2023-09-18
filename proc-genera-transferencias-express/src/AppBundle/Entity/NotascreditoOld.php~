@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotascreditoOld
+ *
+ * @ORM\Table(name="notascredito_old", indexes={@ORM\Index(name="IX_notascredito", columns={"idfactura"})})
+ * @ORM\Entity
+ */
+class NotascreditoOld
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idnotacredito", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnotacredito;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idfactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notacredito", type="string", length=50, nullable=true)
+     */
+    private $notacredito;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=1000, nullable=true)
+     */
+    private $observacion;
+
+
+}

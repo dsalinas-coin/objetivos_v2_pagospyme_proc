@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Vehiculos
+ *
+ * @ORM\Table(name="vehiculos", indexes={@ORM\Index(name="idservicio", columns={"idservicio"})})
+ * @ORM\Entity
+ */
+class Vehiculos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idvehiculo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idvehiculo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrocliente", type="string", length=50, nullable=true)
+     */
+    private $nrocliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono1", type="string", length=50, nullable=true)
+     */
+    private $telefono1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono2", type="string", length=50, nullable=true)
+     */
+    private $telefono2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=200, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="patente", type="string", length=20, nullable=true)
+     */
+    private $patente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="datoadic1", type="string", length=100, nullable=true)
+     */
+    private $datoadic1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="datoadic2", type="string", length=100, nullable=true)
+     */
+    private $datoadic2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="recuperar", type="smallint", nullable=true)
+     */
+    private $recuperar;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

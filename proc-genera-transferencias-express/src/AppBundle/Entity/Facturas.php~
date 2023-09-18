@@ -1,0 +1,207 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Facturas
+ *
+ * @ORM\Table(name="facturas", indexes={@ORM\Index(name="estado", columns={"estado"}), @ORM\Index(name="idusuario", columns={"idusuario"}), @ORM\Index(name="idservicio", columns={"idservicio"}), @ORM\Index(name="fechavto", columns={"fechavto"}), @ORM\Index(name="tipofactura", columns={"tipofactura"}), @ORM\Index(name="idx_facturas_nrofactura", columns={"nrofactura"}), @ORM\Index(name="_dta_index_facturas_5_2007014231__K3_K1_10_12", columns={"importe_bruto", "iva", "idservicio", "idfactura"}), @ORM\Index(name="_dta_index_facturas_5_2007014231__K3_5", columns={"fechavto", "idservicio"}), @ORM\Index(name="fechaingreso", columns={"fechaingreso"}), @ORM\Index(name="idx_facturas_migrated", columns={"idfactura", "migrated"})})
+ * @ORM\Entity
+ */
+class Facturas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idusuario", type="integer", nullable=false)
+     */
+    private $idusuario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaemision", type="datetime", nullable=true)
+     */
+    private $fechaemision;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto2", type="datetime", nullable=true)
+     */
+    private $fechavto2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipofactura", type="string", length=5, nullable=true)
+     */
+    private $tipofactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrofactura", type="string", length=50, nullable=true)
+     */
+    private $nrofactura;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="descuento", type="float", precision=24, scale=0, nullable=true)
+     */
+    private $descuento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_bruto", type="integer", nullable=true)
+     */
+    private $importeBruto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_bruto2", type="integer", nullable=true)
+     */
+    private $importeBruto2;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="iva", type="float", precision=24, scale=0, nullable=true)
+     */
+    private $iva;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=400, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idaccion", type="integer", nullable=true)
+     */
+    private $idaccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaestado", type="datetime", nullable=true)
+     */
+    private $fechaestado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="moneda", type="string", length=2, nullable=true)
+     */
+    private $moneda;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cae", type="bigint", nullable=true)
+     */
+    private $cae;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrearchivo", type="string", length=100, nullable=true)
+     */
+    private $nombrearchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comentarios", type="string", length=300, nullable=true)
+     */
+    private $comentarios;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipodocumento", type="smallint", nullable=true)
+     */
+    private $idtipodocumento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_bruto_vencido", type="integer", nullable=true)
+     */
+    private $importeBrutoVencido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmoneda", type="smallint", nullable=true)
+     */
+    private $idmoneda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=1000, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="migrated", type="integer", nullable=true)
+     */
+    private $migrated;
+
+
+}

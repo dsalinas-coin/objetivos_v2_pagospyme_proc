@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Consultas
+ *
+ * @ORM\Table(name="consultas")
+ * @ORM\Entity
+ */
+class Consultas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idconsulta", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idconsulta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idlistado", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idlistado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcliente", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+
+}

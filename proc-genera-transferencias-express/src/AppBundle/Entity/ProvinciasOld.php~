@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ProvinciasOld
+ *
+ * @ORM\Table(name="provincias_old")
+ * @ORM\Entity
+ */
+class ProvinciasOld
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idprovincia", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idprovincia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id2", type="integer", nullable=true)
+     */
+    private $id2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="provincia", type="string", length=40, nullable=false)
+     */
+    private $provincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notas", type="string", length=1000, nullable=true)
+     */
+    private $notas;
+
+
+}

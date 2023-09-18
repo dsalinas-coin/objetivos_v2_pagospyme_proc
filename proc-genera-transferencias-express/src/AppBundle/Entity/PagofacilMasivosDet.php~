@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilMasivosDet
+ *
+ * @ORM\Table(name="pagofacil_masivos_det", indexes={@ORM\Index(name="idx_pfmd_idasoc_idaplicacion", columns={"idasoc", "idtipocomprobante"}), @ORM\Index(name="idx_pfmd_idtipocomprobante_idaplicacion", columns={"idtipocomprobante", "idaplicacion"}), @ORM\Index(name="_dta_index_pagofacil_masivos_det_5_1269631616__K2_K5", columns={"idcupon", "idaplicacion"})})
+ * @ORM\Entity
+ */
+class PagofacilMasivosDet
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddetalle", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddetalle;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcupon", type="integer", nullable=true)
+     */
+    private $idcupon;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipocomprobante", type="smallint", nullable=true)
+     */
+    private $idtipocomprobante;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idasoc", type="integer", nullable=true)
+     */
+    private $idasoc;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idaplicacion", type="integer", nullable=true)
+     */
+    private $idaplicacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importeparcial", type="integer", nullable=true)
+     */
+    private $importeparcial;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importeparcial2", type="integer", nullable=true)
+     */
+    private $importeparcial2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=150, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechadestransito", type="datetime", nullable=true)
+     */
+    private $fechadestransito;
+
+
+}

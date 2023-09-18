@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UsuariosMovimientos
+ *
+ * @ORM\Table(name="usuarios_movimientos", indexes={@ORM\Index(name="idservicio", columns={"idservicio"}), @ORM\Index(name="idmovimiento_tipo", columns={"idmovimiento_tipo"}), @ORM\Index(name="idmovimiento_subtipo", columns={"idmovimiento_subtipo"}), @ORM\Index(name="idasoc", columns={"idasoc"}), @ORM\Index(name="idx_usuariosmovimientos_importesaldo", columns={"importe", "saldo"}), @ORM\Index(name="idx_usuarios_movimientos_subtipo_idasoc", columns={"idmovimiento_tipo", "idmovimiento_subtipo", "idasoc"})})
+ * @ORM\Entity
+ */
+class UsuariosMovimientos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmovimiento", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idmovimiento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=false)
+     */
+    private $idservicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmovimiento_tipo", type="smallint", nullable=false)
+     */
+    private $idmovimientoTipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmovimiento_subtipo", type="smallint", nullable=true)
+     */
+    private $idmovimientoSubtipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=500, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=false)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="saldo", type="integer", nullable=true)
+     */
+    private $saldo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idasoc", type="integer", nullable=true)
+     */
+    private $idasoc;
+
+
+}

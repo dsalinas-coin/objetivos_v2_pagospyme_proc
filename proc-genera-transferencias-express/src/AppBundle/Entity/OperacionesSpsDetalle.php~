@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OperacionesSpsDetalle
+ *
+ * @ORM\Table(name="operaciones_sps_detalle", uniqueConstraints={@ORM\UniqueConstraint(name="PK_operaciones_sps_detalle", columns={"iddetalle"})})
+ * @ORM\Entity
+ */
+class OperacionesSpsDetalle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddetalle", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddetalle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperacion", type="integer", nullable=true)
+     */
+    private $idoperacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importeparcial", type="integer", nullable=true)
+     */
+    private $importeparcial;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

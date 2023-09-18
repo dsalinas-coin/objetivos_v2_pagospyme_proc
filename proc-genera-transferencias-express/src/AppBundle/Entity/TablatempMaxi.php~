@@ -1,0 +1,88 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TablatempMaxi
+ *
+ * @ORM\Table(name="tablatemp_Maxi")
+ * @ORM\Entity
+ */
+class TablatempMaxi
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col1", type="string", length=200, nullable=true)
+     */
+    private $col1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col2", type="string", length=200, nullable=true)
+     */
+    private $col2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col3", type="string", length=200, nullable=true)
+     */
+    private $col3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col4", type="string", length=200, nullable=true)
+     */
+    private $col4;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col5", type="string", length=100, nullable=true)
+     */
+    private $col5;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col6", type="string", length=100, nullable=true)
+     */
+    private $col6;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col7", type="string", length=500, nullable=true)
+     */
+    private $col7;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col8", type="string", length=100, nullable=true)
+     */
+    private $col8;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="col9", type="string", length=2000, nullable=true)
+     */
+    private $col9;
+
+
+}

@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Controlprocesos
+ *
+ * @ORM\Table(name="controlprocesos")
+ * @ORM\Entity
+ */
+class Controlprocesos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcontrol", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcontrol;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="smallint", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idtipoarchivo", type="string", length=50, nullable=true)
+     */
+    private $idtipoarchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrearchivo", type="string", length=200, nullable=true)
+     */
+    private $nombrearchivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="procesado", type="integer", nullable=false)
+     */
+    private $procesado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="noprocesado", type="integer", nullable=false)
+     */
+    private $noprocesado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="totalprocesado", type="integer", nullable=false)
+     */
+    private $totalprocesado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="totalregistros", type="integer", nullable=false)
+     */
+    private $totalregistros;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=50, nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaproceso", type="datetime", nullable=true)
+     */
+    private $fechaproceso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipoProceso", type="smallint", nullable=true)
+     */
+    private $tipoproceso;
+
+
+}

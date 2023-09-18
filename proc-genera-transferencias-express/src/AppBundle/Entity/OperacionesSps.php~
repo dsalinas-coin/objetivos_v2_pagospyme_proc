@@ -1,0 +1,158 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OperacionesSps
+ *
+ * @ORM\Table(name="operaciones_sps")
+ * @ORM\Entity
+ */
+class OperacionesSps
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idoperacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaoperacion", type="datetime", nullable=true)
+     */
+    private $fechaoperacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmedio", type="smallint", nullable=true)
+     */
+    private $idmedio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nrooperacion", type="integer", nullable=true)
+     */
+    private $nrooperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codoperacion", type="string", length=50, nullable=true)
+     */
+    private $codoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codautorizacion", type="string", length=50, nullable=true)
+     */
+    private $codautorizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cuotas", type="smallint", nullable=true)
+     */
+    private $cuotas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titular", type="string", length=100, nullable=true)
+     */
+    private $titular;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="monto", type="integer", nullable=true)
+     */
+    private $monto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipodocumento", type="smallint", nullable=true)
+     */
+    private $idtipodocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrodocumento", type="string", length=20, nullable=true)
+     */
+    private $nrodocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tarjeta", type="string", length=50, nullable=true)
+     */
+    private $tarjeta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtarjeta", type="smallint", nullable=true)
+     */
+    private $idtarjeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="emailcomprador", type="string", length=80, nullable=true)
+     */
+    private $emailcomprador;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="resultado", type="smallint", nullable=true)
+     */
+    private $resultado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motivo", type="string", length=100, nullable=true)
+     */
+    private $motivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="parametros", type="string", length=2000, nullable=true)
+     */
+    private $parametros;
+
+
+}

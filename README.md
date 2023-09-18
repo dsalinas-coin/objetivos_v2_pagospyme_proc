@@ -1,0 +1,69 @@
+# Pasos para levantar el ambiente 
+
+- 1 docker compose up -d
+- 2 crear el esquema de la base de datos
+- 3 mover los dump al contenedor (https://cajadepagos-my.sharepoint.com/:f:/g/personal/dsalinas_cobroinmediato_tech/Em_gExExLShNlyuAu3IsHDIBbeAm-8XfEHMihH6h3tmkjQ?e=va86e2)
+  - docker cp clientes_servicios_adicionales.sql legacy_db:/clientes_servicios_adicionales.sql
+  - docker cp clientes_tarifas.sql legacy_db:/clientes_tarifas.sql
+  - docker cp clientes.sql legacy_db:/clientes.sql
+  - docker cp cobros_credenciales.sql legacy_db:/cobros_credenciales.sql
+  - docker cp cobrosparciales.sql legacy_db:/cobrosparciales.sql
+  - docker cp emails_tipos.sql legacy_db:/emails_tipos.sql
+  - docker cp emails.sql legacy_db:/emails.sql
+  - docker cp exencion_ganancias.sql legacy_db:/exencion_ganancias.sql
+  - docker cp exencion_iva.sql legacy_db:/exencion_iva.sql
+  - docker cp facturas.sql legacy_db:/facturas.sql
+  - docker cp pagofacil_masivos_det.sql legacy_db:/pagofacil_masivos_det.sql
+  - docker cp pagofacil_masivos_pagos.sql legacy_db:/pagofacil_masivos_pagos.sql
+  - docker cp pagofacil_masivos.sql legacy_db:/pagofacil_masivos.sql
+  - docker cp pagofacil_tipogeneracion.sql legacy_db:/pagofacil_tipogeneracion.sql
+  - docker cp pagofacil_transferencias_categ.sql legacy_db:/pagofacil_transferencias_categ.sql
+  - docker cp pagofacil_transferencias_det.sql legacy_db:/pagofacil_transferencias_det.sql
+  - docker cp pagofacil_transferencias_tipos.sql legacy_db:/pagofacil_transferencias_tipos.sql
+  - docker cp pagofacil_transferencias_zonas.sql legacy_db:/pagofacil_transferencias_zonas.sql
+  - docker cp pagofacil_transferencias.sql legacy_db:/pagofacil_transferencias.sql
+  - docker cp parametros.sql legacy_db:/parametros.sql
+  - docker cp servicios.sql legacy_db:/servicios.sql
+  - docker cp transferencias_categ.sql legacy_db:/transferencias_categ.sql
+  - docker cp transferencias_det.sql legacy_db:/transferencias_det.sql
+  - docker cp transferencias_tipos.sql legacy_db:/transferencias_tipos.sql
+  - docker cp transferencias_zonas.sql legacy_db:/transferencias_zonas.sql
+  - docker cp transferencias.sql legacy_db:/transferencias.sql
+- 4 docker exec -it legacy_db bash  
+- 5 mysql -uroot -proot
+- 6 use cdpnew;
+- 7 insertar la data
+  - source ./clientes_servicios_adicionales.sql
+  - source ./clientes_tarifas.sql
+  - source ./clientes.sql
+  - source ./cobros_credenciales.sql
+  - source ./cobrosparciales.sql
+  - source ./emails_tipos.sql
+  - source ./emails.sql
+  - source ./exencion_ganancias.sql
+  - source ./exencion_iva.sql
+  - source ./facturas.sql
+  - source ./pagofacil_masivos_det.sql
+  - source ./pagofacil_masivos_pagos.sql
+  - source ./pagofacil_masivos.sql
+  - source ./pagofacil_tipogeneracion.sql
+  - source ./pagofacil_transferencias_categ.sql
+  - source ./pagofacil_transferencias_det.sql
+  - source ./pagofacil_transferencias_tipos.sql
+  - source ./pagofacil_transferencias_zonas.sql
+  - source ./pagofacil_transferencias.sql
+  - source ./parametros.sql
+  - source ./servicios.sql
+  - source ./transferencias_categ.sql
+  - source ./transferencias_det.sql
+  - source ./transferencias_tipos.sql
+  - source ./transferencias_zonas.sql
+  - source ./transferencias.sql
+- 8 docker exec -it genera-transferencias-express bash
+- 9 php app/console genera:transferencias:pagofacil:express 20230101 20230531 20230531
+
+###
+
+- En el primer if setea las categorias 11 (Ret. IVA), 12 (Ret. Ganancias)
+- En el segundo if setea las categorias 1 (Total pagos), 6 (variable), 3 (Iva)
+- En el tercer if setea las categorias 11 (Ret. IVA), 12 (Ret. Ganancias)

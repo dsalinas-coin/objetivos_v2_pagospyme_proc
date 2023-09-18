@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tipoaplicacion
+ *
+ * @ORM\Table(name="tipoaplicacion")
+ * @ORM\Entity
+ */
+class Tipoaplicacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipoaplicacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtipoaplicacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="campo_relacionado", type="string", length=50, nullable=true)
+     */
+    private $campoRelacionado;
+
+
+}

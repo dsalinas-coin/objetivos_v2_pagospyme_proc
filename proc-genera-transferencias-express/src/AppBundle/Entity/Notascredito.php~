@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Notascredito
+ *
+ * @ORM\Table(name="notascredito", indexes={@ORM\Index(name="Idfactura", columns={"idfactura"}), @ORM\Index(name="idservicio", columns={"idservicio"})})
+ * @ORM\Entity
+ */
+class Notascredito
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnotacredito", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnotacredito;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tiponota", type="string", length=50, nullable=true)
+     */
+    private $tiponota;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notacredito", type="string", length=50, nullable=true)
+     */
+    private $notacredito;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaemision", type="datetime", nullable=true)
+     */
+    private $fechaemision;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=500, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+
+}

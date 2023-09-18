@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Recibos
+ *
+ * @ORM\Table(name="recibos")
+ * @ORM\Entity
+ */
+class Recibos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idrecibo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idrecibo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrocomprobante", type="string", length=50, nullable=true)
+     */
+    private $nrocomprobante;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaemision", type="datetime", nullable=true)
+     */
+    private $fechaemision;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=500, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+
+}

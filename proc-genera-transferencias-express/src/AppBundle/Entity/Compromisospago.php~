@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Compromisospago
+ *
+ * @ORM\Table(name="compromisospago", indexes={@ORM\Index(name="idnota", columns={"idnota"}), @ORM\Index(name="fechacompromiso", columns={"fechacompromiso"})})
+ * @ORM\Entity
+ */
+class Compromisospago
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcompromiso", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcompromiso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnota", type="integer", nullable=true)
+     */
+    private $idnota;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacompromiso", type="datetime", nullable=true)
+     */
+    private $fechacompromiso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="montocompromiso", type="integer", nullable=true)
+     */
+    private $montocompromiso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

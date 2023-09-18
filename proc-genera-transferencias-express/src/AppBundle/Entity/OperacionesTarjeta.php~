@@ -1,0 +1,130 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OperacionesTarjeta
+ *
+ * @ORM\Table(name="operaciones_tarjeta")
+ * @ORM\Entity
+ */
+class OperacionesTarjeta
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idoperacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="integer", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulartarjeta", type="string", length=100, nullable=true)
+     */
+    private $titulartarjeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dnititulartarjeta", type="string", length=50, nullable=true)
+     */
+    private $dnititulartarjeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombretarjeta", type="string", length=10, nullable=true)
+     */
+    private $nombretarjeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerotarjeta", type="string", length=20, nullable=true)
+     */
+    private $numerotarjeta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codseguridad", type="string", length=4, nullable=true)
+     */
+    private $codseguridad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vtotarjeta", type="string", length=7, nullable=true)
+     */
+    private $vtotarjeta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cuotas", type="smallint", nullable=true)
+     */
+    private $cuotas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importeporcuota", type="integer", nullable=true)
+     */
+    private $importeporcuota;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="adherirsedebito", type="boolean", nullable=true)
+     */
+    private $adherirsedebito;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=200, nullable=true)
+     */
+    private $observaciones;
+
+
+}

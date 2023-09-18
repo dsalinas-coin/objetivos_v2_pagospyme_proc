@@ -1,0 +1,137 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EvContactos
+ *
+ * @ORM\Table(name="ev_contactos")
+ * @ORM\Entity
+ */
+class EvContactos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcontacto", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcontacto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idbase", type="integer", nullable=true)
+     */
+    private $idbase;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idexterno", type="string", length=50, nullable=true)
+     */
+    private $idexterno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuit", type="string", length=50, nullable=true)
+     */
+    private $cuit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="razonsocial", type="string", length=100, nullable=true)
+     */
+    private $razonsocial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipocliente", type="string", length=50, nullable=true)
+     */
+    private $tipocliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=120, nullable=true)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cp", type="string", length=50, nullable=true)
+     */
+    private $cp;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=50, nullable=true)
+     */
+    private $localidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="provincia", type="string", length=50, nullable=true)
+     */
+    private $provincia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono1", type="string", length=200, nullable=true)
+     */
+    private $telefono1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono2", type="string", length=200, nullable=true)
+     */
+    private $telefono2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=150, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombrecontacto", type="string", length=50, nullable=true)
+     */
+    private $nombrecontacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apellidocontacto", type="string", length=50, nullable=true)
+     */
+    private $apellidocontacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rolcontacto", type="string", length=50, nullable=true)
+     */
+    private $rolcontacto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="smallint", nullable=true)
+     */
+    private $idoperador;
+
+
+}

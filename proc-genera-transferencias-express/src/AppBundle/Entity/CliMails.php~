@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CliMails
+ *
+ * @ORM\Table(name="cli_mails")
+ * @ORM\Entity
+ */
+class CliMails
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idmail", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idmail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcliente", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idaccion", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idaccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="desde", type="string", length=200, nullable=false)
+     */
+    private $desde;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="desc_desde", type="string", length=200, nullable=true)
+     */
+    private $descDesde;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="subject", type="string", length=200, nullable=false)
+     */
+    private $subject;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="replyto", type="string", length=200, nullable=true)
+     */
+    private $replyto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texto", type="text", length=8, nullable=false)
+     */
+    private $texto;
+
+
+}

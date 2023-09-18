@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Partidos
+ *
+ * @ORM\Table(name="partidos")
+ * @ORM\Entity
+ */
+class Partidos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idpartido", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idpartido;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idzona", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idzona;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=40, nullable=true)
+     */
+    private $descripcion;
+
+
+}

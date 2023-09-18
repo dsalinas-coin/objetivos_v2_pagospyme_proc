@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EvNotas
+ *
+ * @ORM\Table(name="ev_notas")
+ * @ORM\Entity
+ */
+class EvNotas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnota", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnota;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcontacto", type="integer", nullable=true)
+     */
+    private $idcontacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="personacontactada", type="string", length=50, nullable=true)
+     */
+    private $personacontactada;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=2000, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcategoria", type="integer", nullable=true)
+     */
+    private $idcategoria;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idoperador", type="smallint", nullable=true)
+     */
+    private $idoperador;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

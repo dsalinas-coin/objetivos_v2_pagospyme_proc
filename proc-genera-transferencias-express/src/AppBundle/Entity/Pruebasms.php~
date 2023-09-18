@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Pruebasms
+ *
+ * @ORM\Table(name="pruebasms")
+ * @ORM\Entity
+ */
+class Pruebasms
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsms;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Nombre", type="string", length=50, nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Telefono", type="string", length=50, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="smsenviado", type="smallint", nullable=true)
+     */
+    private $smsenviado;
+
+
+}

@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilTipogeneracion
+ *
+ * @ORM\Table(name="pagofacil_tipogeneracion")
+ * @ORM\Entity
+ */
+class PagofacilTipogeneracion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipogeneracion", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtipogeneracion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="string", length=50, nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+
+}

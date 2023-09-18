@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CobrosSpecial
+ *
+ * @ORM\Table(name="cobros_special", indexes={@ORM\Index(name="idx_idoperacion", columns={"idoperacion"})})
+ * @ORM\Entity
+ */
+class CobrosSpecial
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idoperacion", type="string", length=50, nullable=false)
+     */
+    private $idoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcliente", type="string", length=10, nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=10, nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrocliente", type="string", length=100, nullable=true)
+     */
+    private $nrocliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+
+}

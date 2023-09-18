@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesServiciosAdicionales
+ *
+ * @ORM\Table(name="clientes_servicios_adicionales")
+ * @ORM\Entity
+ */
+class ClientesServiciosAdicionales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente_servicio_adicional", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idclienteServicioAdicional;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio_adicional", type="integer", nullable=true)
+     */
+    private $idservicioAdicional;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="datetime", nullable=true)
+     */
+    private $fechaalta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

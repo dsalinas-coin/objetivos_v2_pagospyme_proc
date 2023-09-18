@@ -1,0 +1,56 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Liquidaciones
+ *
+ * @ORM\Table(name="liquidaciones", indexes={@ORM\Index(name="IDX_6262B86DEA2DE6EC", columns={"idarchivo"})})
+ * @ORM\Entity
+ */
+class Liquidaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idliquidacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idliquidacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_ingreso", type="datetime", nullable=false)
+     */
+    private $fechaIngreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+    /**
+     * @var \Archivos
+     *
+     * @ORM\ManyToOne(targetEntity="Archivos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idarchivo", referencedColumnName="idarchivo")
+     * })
+     */
+    private $idarchivo;
+
+
+}

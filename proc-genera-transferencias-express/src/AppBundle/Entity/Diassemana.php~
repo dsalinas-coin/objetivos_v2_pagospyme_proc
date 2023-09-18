@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Diassemana
+ *
+ * @ORM\Table(name="diassemana")
+ * @ORM\Entity
+ */
+class Diassemana
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddiasemana", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddiasemana;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=15, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abreviatura", type="string", length=3, nullable=true)
+     */
+    private $abreviatura;
+
+
+}

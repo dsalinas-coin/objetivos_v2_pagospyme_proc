@@ -1,0 +1,193 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Pagomiscuentas
+ *
+ * @ORM\Table(name="pagomiscuentas")
+ * @ORM\Entity
+ */
+class Pagomiscuentas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idpmc", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idpmc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="string", length=10, nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmoneda", type="smallint", nullable=true)
+     */
+    private $idmoneda;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto2", type="datetime", nullable=true)
+     */
+    private $fechavto2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe2", type="integer", nullable=true)
+     */
+    private $importe2;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacobro", type="datetime", nullable=true)
+     */
+    private $fechacobro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importepagado", type="integer", nullable=true)
+     */
+    private $importepagado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="idcodigomovimiento", type="boolean", nullable=true)
+     */
+    private $idcodigomovimiento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaacreditacion", type="datetime", nullable=true)
+     */
+    private $fechaacreditacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="canalpago", type="string", length=2, nullable=true)
+     */
+    private $canalpago;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nrocontrol", type="smallint", nullable=true)
+     */
+    private $nrocontrol;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=200, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensajeticket", type="string", length=40, nullable=true)
+     */
+    private $mensajeticket;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensajepantalla", type="string", length=15, nullable=true)
+     */
+    private $mensajepantalla;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enviado", type="boolean", nullable=true)
+     */
+    private $enviado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="pagado", type="boolean", nullable=true)
+     */
+    private $pagado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaenviopmc", type="datetime", nullable=true)
+     */
+    private $fechaenviopmc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechadesactivacion", type="datetime", nullable=true)
+     */
+    private $fechadesactivacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_cliente", type="string", length=20, nullable=true)
+     */
+    private $codigoCliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="emailcobroenviado", type="integer", nullable=true)
+     */
+    private $emailcobroenviado;
+
+
+}

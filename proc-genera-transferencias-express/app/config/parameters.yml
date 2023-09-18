@@ -1,0 +1,29 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: legacy_db
+    database_port: 3306
+    database_name: cdpnew
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: smtp-relay.pagospyme.com
+    mailer_user: postmaster@pagospyme.com
+    mailer_password: Change2Me
+    mailer_port: 587
+    #mailer_host: 
+    #mailer_user: 
+    #mailer_password: 
+    #mailer_port: 587
+    mailer_encryption: tls
+    secret: 33d4cbd149277e51c5436bbd06a7e7c4c71362cd
+    database_driver: pdo_mysql
+    emails_to: 'dsalinas@cobroinmediato.tech'
+    url_apigw: 'https://tef.api.pagospyme.com/commissions'
+    urls:
+        sire:
+            token: 'https://afip.api.pagospyme.com/company_webservices/4'
+            wsdl: 'https://ws-aplicativos-reca.afip.gob.ar/sire/ws/v1/c2005/2005?wsdl'
+        padron:
+            token: 'https://afip.api.pagospyme.com/company_webservices/3'
+            wsdl: 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5?WSDL'
+    driver_class: pdo_mysql

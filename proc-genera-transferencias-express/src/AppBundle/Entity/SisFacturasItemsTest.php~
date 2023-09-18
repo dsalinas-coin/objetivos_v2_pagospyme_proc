@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisFacturasItemsTest
+ *
+ * @ORM\Table(name="sis_facturas_items_test")
+ * @ORM\Entity
+ */
+class SisFacturasItemsTest
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iditem", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iditem;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=true)
+     */
+    private $idfactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idconcepto", type="string", length=100, nullable=true)
+     */
+    private $idconcepto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cantidad", type="smallint", nullable=true)
+     */
+    private $cantidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pbruto_unitario", type="integer", nullable=true)
+     */
+    private $pbrutoUnitario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total", type="integer", nullable=true)
+     */
+    private $total;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pneto_unitario", type="integer", nullable=true)
+     */
+    private $pnetoUnitario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total_neto", type="integer", nullable=true)
+     */
+    private $totalNeto;
+
+
+}

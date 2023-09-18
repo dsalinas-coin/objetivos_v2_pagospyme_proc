@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotificacionesReversasHistorial
+ *
+ * @ORM\Table(name="notificaciones_reversas_historial")
+ * @ORM\Entity
+ */
+class NotificacionesReversasHistorial
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnotificacion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnotificacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio_adicional", type="integer", nullable=true)
+     */
+    private $idservicioAdicional;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_reversa", type="datetime", nullable=true)
+     */
+    private $fechaReversa;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_enviado", type="datetime", nullable=true)
+     */
+    private $fechaEnviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_abonado", type="integer", nullable=true)
+     */
+    private $importeAbonado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idmedio", type="integer", nullable=true)
+     */
+    private $idmedio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_operacion", type="string", length=100, nullable=true)
+     */
+    private $codigoOperacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_pago", type="datetime", nullable=true)
+     */
+    private $fechaPago;
+
+
+}

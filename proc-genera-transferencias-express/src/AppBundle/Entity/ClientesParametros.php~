@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesParametros
+ *
+ * @ORM\Table(name="clientes_parametros")
+ * @ORM\Entity
+ */
+class ClientesParametros
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idparametro", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idparametro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idclave", type="integer", nullable=false)
+     */
+    private $idclave;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="valor", type="string", length=200, nullable=false)
+     */
+    private $valor;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=false)
+     */
+    private $activo;
+
+
+}

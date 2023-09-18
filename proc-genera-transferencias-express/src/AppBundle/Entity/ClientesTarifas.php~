@@ -1,0 +1,102 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesTarifas
+ *
+ * @ORM\Table(name="clientes_tarifas", indexes={@ORM\Index(name="IX_clientes_tarifas", columns={"idcliente"}), @ORM\Index(name="IX_clientes_tarifas_1", columns={"idconcepto"})})
+ * @ORM\Entity
+ */
+class ClientesTarifas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtarifa", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtarifa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=false)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idconcepto", type="integer", nullable=false)
+     */
+    private $idconcepto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="ultimamodificacion", type="datetime", nullable=true)
+     */
+    private $ultimamodificacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="valor", type="integer", nullable=false)
+     */
+    private $valor;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comentario", type="string", length=50, nullable=true)
+     */
+    private $comentario;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacreacion", type="datetime", nullable=false)
+     */
+    private $fechacreacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fechavencimiento", type="string", length=10, nullable=true)
+     */
+    private $fechavencimiento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="valorpordefecto", type="integer", nullable=true)
+     */
+    private $valorpordefecto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaperiododesde", type="datetime", nullable=true)
+     */
+    private $fechaperiododesde;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaperiodohasta", type="datetime", nullable=true)
+     */
+    private $fechaperiodohasta;
+
+
+}

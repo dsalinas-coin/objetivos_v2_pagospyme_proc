@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisTiposfactura
+ *
+ * @ORM\Table(name="sis_tiposfactura")
+ * @ORM\Entity
+ */
+class SisTiposfactura
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipo_factura", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idtipoFactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=50, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=true)
+     */
+    private $activo;
+
+
+}

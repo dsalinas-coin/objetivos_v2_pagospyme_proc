@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisFacturasEmisores
+ *
+ * @ORM\Table(name="sis_facturas_emisores")
+ * @ORM\Entity
+ */
+class SisFacturasEmisores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura_emisor", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfacturaEmisor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuit", type="string", length=11, nullable=true)
+     */
+    private $cuit;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="activo", type="boolean", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="punto_venta", type="integer", nullable=true)
+     */
+    private $puntoVenta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuit_web", type="string", length=13, nullable=true)
+     */
+    private $cuitWeb;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ingresos_brutos", type="string", length=50, nullable=true)
+     */
+    private $ingresosBrutos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="inicio_actividades", type="string", length=50, nullable=true)
+     */
+    private $inicioActividades;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="iva", type="string", length=50, nullable=true)
+     */
+    private $iva;
+
+
+}

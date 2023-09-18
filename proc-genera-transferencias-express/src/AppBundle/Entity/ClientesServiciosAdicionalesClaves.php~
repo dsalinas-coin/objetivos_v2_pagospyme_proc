@@ -1,0 +1,42 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ClientesServiciosAdicionalesClaves
+ *
+ * @ORM\Table(name="clientes_servicios_adicionales_claves")
+ * @ORM\Entity
+ */
+class ClientesServiciosAdicionalesClaves
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio_adicional", type="integer", nullable=false)
+     */
+    private $idservicioAdicional;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clave", type="string", length=100, nullable=false)
+     */
+    private $clave;
+
+    /**
+     * @var \ClientesServiciosAdicionalesClaves
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="ClientesServiciosAdicionalesClaves")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idclave", referencedColumnName="idclave")
+     * })
+     */
+    private $idclave;
+
+
+}

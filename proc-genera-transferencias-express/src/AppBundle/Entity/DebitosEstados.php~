@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DebitosEstados
+ *
+ * @ORM\Table(name="debitos_estados")
+ * @ORM\Entity
+ */
+class DebitosEstados
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idestado", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idestado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=3, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=60, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+
+}

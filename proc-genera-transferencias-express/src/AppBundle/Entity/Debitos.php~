@@ -1,0 +1,108 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Debitos
+ *
+ * @ORM\Table(name="debitos", indexes={@ORM\Index(name="IDX_67E122A72B18C94B", columns={"idcliente"}), @ORM\Index(name="IDX_67E122A742E04C4F", columns={"idestado"})})
+ * @ORM\Entity
+ */
+class Debitos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iddebito", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iddebito;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=false)
+     */
+    private $idfactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_envio", type="datetime", nullable=false)
+     */
+    private $fechaEnvio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_proceso_rgp", type="datetime", nullable=true)
+     */
+    private $fechaProcesoRgp;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_debito", type="datetime", nullable=false)
+     */
+    private $fechaDebito;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=false)
+     */
+    private $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="banco", type="string", length=10, nullable=true)
+     */
+    private $banco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cbu", type="string", length=50, nullable=true)
+     */
+    private $cbu;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_ingreso_resultado", type="datetime", nullable=true)
+     */
+    private $fechaIngresoResultado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="informado", type="smallint", nullable=false)
+     */
+    private $informado;
+
+    /**
+     * @var \Clientes
+     *
+     * @ORM\ManyToOne(targetEntity="Clientes")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idcliente", referencedColumnName="idcliente")
+     * })
+     */
+    private $idcliente;
+
+    /**
+     * @var \DebitosEstados
+     *
+     * @ORM\ManyToOne(targetEntity="DebitosEstados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestado", referencedColumnName="idestado")
+     * })
+     */
+    private $idestado;
+
+
+}

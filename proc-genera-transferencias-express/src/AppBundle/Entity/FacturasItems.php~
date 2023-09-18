@@ -1,0 +1,102 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FacturasItems
+ *
+ * @ORM\Table(name="facturas_items", indexes={@ORM\Index(name="idx_idfactura", columns={"idfactura"}), @ORM\Index(name="identityarchivo", columns={"identityarchivo"})})
+ * @ORM\Entity
+ */
+class FacturasItems
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura_item", type="decimal", precision=18, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfacturaItem;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cantidad", type="integer", nullable=false)
+     */
+    private $cantidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=400, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_unitario", type="integer", nullable=false)
+     */
+    private $importeUnitario;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="bonificacion", type="float", precision=24, scale=0, nullable=true)
+     */
+    private $bonificacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_total", type="integer", nullable=false)
+     */
+    private $importeTotal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=400, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="identityarchivo", type="decimal", precision=18, scale=0, nullable=true)
+     */
+    private $identityarchivo;
+
+
+}

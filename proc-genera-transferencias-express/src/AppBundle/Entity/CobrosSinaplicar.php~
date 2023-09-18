@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CobrosSinaplicar
+ *
+ * @ORM\Table(name="cobros_sinaplicar")
+ * @ORM\Entity
+ */
+class CobrosSinaplicar
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobro", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcobro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=false)
+     */
+    private $idservicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=false)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=false)
+     */
+    private $fechapago;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=false)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="aplicado", type="smallint", nullable=false)
+     */
+    private $aplicado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones_internas", type="string", length=200, nullable=true)
+     */
+    private $observacionesInternas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcupon", type="integer", nullable=true)
+     */
+    private $idcupon;
+
+
+}

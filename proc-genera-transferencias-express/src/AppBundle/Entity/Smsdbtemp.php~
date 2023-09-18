@@ -1,0 +1,109 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Smsdbtemp
+ *
+ * @ORM\Table(name="smsdbtemp", indexes={@ORM\Index(name="telefono", columns={"telefono"})})
+ * @ORM\Entity
+ */
+class Smsdbtemp
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsms", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idsms;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaingreso", type="datetime", nullable=true)
+     */
+    private $fechaingreso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numcliente", type="string", length=50, nullable=false)
+     */
+    private $numcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=false)
+     */
+    private $importe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrodocumento", type="string", length=20, nullable=true)
+     */
+    private $nrodocumento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="digito", type="integer", nullable=true)
+     */
+    private $digito;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=50, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaenviado", type="datetime", nullable=true)
+     */
+    private $fechaenviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="smsenviado", type="smallint", nullable=true)
+     */
+    private $smsenviado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsender", type="smallint", nullable=true)
+     */
+    private $idsender;
+
+
+}

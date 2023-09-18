@@ -1,0 +1,95 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilCredenciales
+ *
+ * @ORM\Table(name="pagofacil_credenciales", indexes={@ORM\Index(name="idx_pagofacil_credenciales_codcredencialpf", columns={"codcredencialpf"}), @ORM\Index(name="idx_pagofacil_credenciales_codcredencialpf_recortado", columns={"codcredencialpf_recortado"}), @ORM\Index(name="idx_pagofacil_credenciales_idcliente", columns={"idcliente"}), @ORM\Index(name="idx_pagofacil_credenciales_ixdj3534kddvnvl", columns={"idcredencial", "codcredencialpf", "idservicio"})})
+ * @ORM\Entity
+ */
+class PagofacilCredenciales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcredencial", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcredencial;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codcredencialpf", type="string", length=16, nullable=true)
+     */
+    private $codcredencialpf;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prefijo", type="integer", nullable=true)
+     */
+    private $prefijo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nro", type="integer", nullable=true)
+     */
+    private $nro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechageneracion", type="datetime", nullable=true)
+     */
+    private $fechageneracion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codcredencialpf_recortado", type="string", length=10, nullable=true)
+     */
+    private $codcredencialpfRecortado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idarchivo", type="integer", nullable=true)
+     */
+    private $idarchivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="credonline", type="smallint", nullable=true)
+     */
+    private $credonline;
+
+
+}

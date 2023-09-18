@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Examenes
+ *
+ * @ORM\Table(name="examenes")
+ * @ORM\Entity
+ */
+class Examenes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idexamen", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idexamen;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=true)
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cant_preguntas", type="smallint", nullable=true)
+     */
+    private $cantPreguntas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="string", length=300, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+
+}

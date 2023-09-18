@@ -1,0 +1,88 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LogueosWeb
+ *
+ * @ORM\Table(name="logueos_web", indexes={@ORM\Index(name="resultado", columns={"resultado"})})
+ * @ORM\Entity
+ */
+class LogueosWeb
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idlogueo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idlogueo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechalogueo", type="datetime", nullable=true)
+     */
+    private $fechalogueo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usuario", type="string", length=100, nullable=true)
+     */
+    private $usuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clave", type="string", length=100, nullable=true)
+     */
+    private $clave;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="resultado", type="smallint", nullable=true)
+     */
+    private $resultado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccionip", type="string", length=50, nullable=true)
+     */
+    private $direccionip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="useragent", type="string", length=300, nullable=true)
+     */
+    private $useragent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo", type="string", length=100, nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bajonivel", type="string", length=50, nullable=true)
+     */
+    private $bajonivel;
+
+
+}

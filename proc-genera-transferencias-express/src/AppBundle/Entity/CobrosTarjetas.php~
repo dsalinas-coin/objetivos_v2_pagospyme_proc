@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CobrosTarjetas
+ *
+ * @ORM\Table(name="cobros_tarjetas")
+ * @ORM\Entity
+ */
+class CobrosTarjetas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idoperacion", type="decimal", precision=18, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idfactura", type="decimal", precision=18, scale=0, nullable=false)
+     */
+    private $idfactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcobro", type="decimal", precision=18, scale=0, nullable=true)
+     */
+    private $idcobro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="datetime", nullable=true)
+     */
+    private $fechaalta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="medio", type="decimal", precision=18, scale=0, nullable=true)
+     */
+    private $medio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", length=8, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+
+}

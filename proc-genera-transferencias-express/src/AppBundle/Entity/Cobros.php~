@@ -1,0 +1,193 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cobros
+ *
+ * @ORM\Table(name="cobros", uniqueConstraints={@ORM\UniqueConstraint(name="UQ__Pagos__145C0A3F", columns={"idfactura"})}, indexes={@ORM\Index(name="idx_estado", columns={"estado"}), @ORM\Index(name="idx_fechacobro", columns={"fechacobro"}), @ORM\Index(name="idx_idformapago", columns={"idformapago"})})
+ * @ORM\Entity
+ */
+class Cobros
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idcobro", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcobro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=false)
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idformapago", type="integer", nullable=false)
+     */
+    private $idformapago;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="datetime", nullable=false)
+     */
+    private $fechaalta;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechapago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechacobro", type="datetime", nullable=true)
+     */
+    private $fechacobro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe", type="integer", nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importeretencion", type="integer", nullable=true)
+     */
+    private $importeretencion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contacto", type="string", length=100, nullable=true)
+     */
+    private $contacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hora", type="string", length=30, nullable=true)
+     */
+    private $hora;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idliquidacion", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idliquidacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nrocheque", type="string", length=40, nullable=true)
+     */
+    private $nrocheque;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importecheque", type="integer", nullable=true)
+     */
+    private $importecheque;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="banco", type="string", length=40, nullable=true)
+     */
+    private $banco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sucursal", type="string", length=40, nullable=true)
+     */
+    private $sucursal;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaemision", type="datetime", nullable=true)
+     */
+    private $fechaemision;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechadeposito", type="datetime", nullable=true)
+     */
+    private $fechadeposito;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=100, nullable=true)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="localidad", type="string", length=100, nullable=true)
+     */
+    private $localidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idlocalidad", type="integer", nullable=true)
+     */
+    private $idlocalidad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idpartido", type="integer", nullable=true)
+     */
+    private $idpartido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcobrador", type="integer", nullable=true)
+     */
+    private $idcobrador;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=1000, nullable=true)
+     */
+    private $observacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo", type="integer", nullable=true)
+     */
+    private $tipo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="integer", nullable=false)
+     */
+    private $estado;
+
+
+}

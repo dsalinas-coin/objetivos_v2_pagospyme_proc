@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LogProcesos
+ *
+ * @ORM\Table(name="log_procesos", uniqueConstraints={@ORM\UniqueConstraint(name="UQ__log_procesos__1ECF7711", columns={"idproceso"})})
+ * @ORM\Entity
+ */
+class LogProcesos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idproceso", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idproceso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idsubproc", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $idsubproc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetime", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modulo", type="string", length=100, nullable=false)
+     */
+    private $modulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", length=8, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="idtipo", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $idtipo;
+
+
+}

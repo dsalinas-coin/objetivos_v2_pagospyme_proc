@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisTareasPrioridades
+ *
+ * @ORM\Table(name="sis_tareas_prioridades")
+ * @ORM\Entity
+ */
+class SisTareasPrioridades
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idprioridad", type="smallint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idprioridad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="orden", type="smallint", nullable=true)
+     */
+    private $orden;
+
+
+}

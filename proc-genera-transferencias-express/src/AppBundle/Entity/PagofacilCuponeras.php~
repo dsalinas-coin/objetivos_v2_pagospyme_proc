@@ -1,0 +1,88 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PagofacilCuponeras
+ *
+ * @ORM\Table(name="pagofacil_cuponeras")
+ * @ORM\Entity
+ */
+class PagofacilCuponeras
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcuponera", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idcuponera;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_generacion", type="datetime", nullable=true)
+     */
+    private $fechaGeneracion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idservicio", type="integer", nullable=true)
+     */
+    private $idservicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cant_cuotas", type="smallint", nullable=true)
+     */
+    private $cantCuotas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_total", type="integer", nullable=true)
+     */
+    private $importeTotal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ruta", type="string", length=50, nullable=true)
+     */
+    private $ruta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipogeneracion", type="smallint", nullable=true)
+     */
+    private $idtipogeneracion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_desactivacion", type="datetime", nullable=true)
+     */
+    private $fechaDesactivacion;
+
+
+}

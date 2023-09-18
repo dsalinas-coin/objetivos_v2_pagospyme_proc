@@ -1,0 +1,91 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotificacionesPagosHistorialPagofacil
+ *
+ * @ORM\Table(name="notificaciones_pagos_historial_pagofacil", indexes={@ORM\Index(name="IDX_D04C5DEE343566E5", columns={"idnotificacion"})})
+ * @ORM\Entity
+ */
+class NotificacionesPagosHistorialPagofacil
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idnotificacion_pf", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idnotificacionPf;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_barras", type="string", length=42, nullable=false)
+     */
+    private $codigoBarras;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo_documento", type="string", length=3, nullable=true)
+     */
+    private $tipoDocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numero_documento", type="string", length=100, nullable=true)
+     */
+    private $numeroDocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numero_usuario", type="string", length=100, nullable=false)
+     */
+    private $numeroUsuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="moneda", type="string", length=3, nullable=true)
+     */
+    private $moneda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="terminal", type="string", length=6, nullable=true)
+     */
+    private $terminal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numero_transaccion", type="string", length=5, nullable=true)
+     */
+    private $numeroTransaccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_proceso_pf", type="datetime", nullable=true)
+     */
+    private $fechaProcesoPf;
+
+    /**
+     * @var \NotificacionesPagosHistorial
+     *
+     * @ORM\ManyToOne(targetEntity="NotificacionesPagosHistorial")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idnotificacion", referencedColumnName="idnotificacion")
+     * })
+     */
+    private $idnotificacion;
+
+
+}

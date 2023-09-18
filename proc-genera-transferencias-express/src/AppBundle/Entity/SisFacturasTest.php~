@@ -1,0 +1,172 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SisFacturasTest
+ *
+ * @ORM\Table(name="sis_facturas_test")
+ * @ORM\Entity
+ */
+class SisFacturasTest
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idfactura", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idcliente", type="integer", nullable=true)
+     */
+    private $idcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipofactura", type="string", length=5, nullable=true)
+     */
+    private $tipofactura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="puntodeventa", type="integer", nullable=true)
+     */
+    private $puntodeventa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nrofactura", type="integer", nullable=true)
+     */
+    private $nrofactura;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaalta", type="datetime", nullable=true)
+     */
+    private $fechaalta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mesdatos", type="smallint", nullable=true)
+     */
+    private $mesdatos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="aniodatos", type="smallint", nullable=true)
+     */
+    private $aniodatos;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaemision", type="datetime", nullable=true)
+     */
+    private $fechaemision;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavto", type="datetime", nullable=true)
+     */
+    private $fechavto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_bruto", type="integer", nullable=true)
+     */
+    private $importeBruto;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="iva", type="float", precision=24, scale=0, nullable=true)
+     */
+    private $iva;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cae", type="string", length=15, nullable=true)
+     */
+    private $cae;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idtipo_factura", type="smallint", nullable=true)
+     */
+    private $idtipoFactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motivo", type="string", length=10, nullable=true)
+     */
+    private $motivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idsolicitud", type="integer", nullable=true)
+     */
+    private $idsolicitud;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="resultado", type="string", length=10, nullable=true)
+     */
+    private $resultado;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="smallint", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechamail", type="datetime", nullable=true)
+     */
+    private $fechamail;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idempresa", type="integer", nullable=true)
+     */
+    private $idempresa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="importe_total", type="integer", nullable=true)
+     */
+    private $importeTotal;
+
+
+}

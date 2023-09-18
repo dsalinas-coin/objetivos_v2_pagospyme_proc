@@ -1,0 +1,53 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ExamenesRespuestas
+ *
+ * @ORM\Table(name="examenes_respuestas")
+ * @ORM\Entity
+ */
+class ExamenesRespuestas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idrespuesta", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idrespuesta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idpregunta", type="integer", nullable=false)
+     */
+    private $idpregunta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="detalle", type="string", length=500, nullable=false)
+     */
+    private $detalle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="correcto", type="smallint", nullable=false)
+     */
+    private $correcto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="estado", type="smallint", nullable=false)
+     */
+    private $estado;
+
+
+}
