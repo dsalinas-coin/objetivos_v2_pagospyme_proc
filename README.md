@@ -60,7 +60,7 @@
   - source ./transferencias_zonas.sql
   - source ./transferencias.sql
 - 8 docker exec -it genera-transferencias-express bash
-- 9 php app/console genera:transferencias:pagofacil:express 20230101 20230531 20230531
+- 9 php app/console genera:transferencias:pagofacil:express 20230901 20230930 20230930
 
 ###
 

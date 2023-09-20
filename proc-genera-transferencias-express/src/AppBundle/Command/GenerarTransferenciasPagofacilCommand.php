@@ -60,24 +60,24 @@ class GenerarTransferenciasPagofacilCommand extends ContainerAwareCommand
         $stmt->bindValue(2, $fechahasta);
         $stmt->execute();
 
-        $resultado = $stmt->fetchAll();
+        // $resultado = $stmt->fetchAll();
         
         $conn->close();
 
-        dump($resultado);
-        die;
-        /*$resultado = [[
+        // dump($resultado);
+        // die;
+        $resultado = [[
             'idcliente' => 1615, //unico para cada resultado, deberian salir agrupados
             'cantidad' => 5, //cantidad de transferencias agrupadas por idcobro
-            'fechapago' => '2023-05-30',
+            'fechapago' => '2023-09-19',
             'importe' => 1080.00, //suma de los importes
             'cobrado' => 70,  //   sum(case when cp.importe * ct.valor <= 70 then 70 else cp.importe * ct.valor end) cobrado, mejor explicado abajo
             'comision' => 50.00, // valor dentro de clientes tarifas, se utiliza para calcular el total cobrado.
             'certificado_pyme' => 0, // supongo es un boolean, en la db que me pasaron, todas son 0.
-            'cuit' => '30500010912', //cliente
+            'cuit' => '30714528749', //cliente
             'ex_iva' => 0, //bolean, determian las exepciones
             'ex_ganancias' => 0  //bolean, determian las exepciones
-        ],*/
+        ]];
 
         echo "\n\n----------------Se van a procesar " . sizeof($resultado) . " transferencias del SP" . "----------------\n";
 
